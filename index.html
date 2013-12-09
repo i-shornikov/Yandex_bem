@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<meta charset=utf-8 />
+	<title>Расписание лекций</title>
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<script src="jquery.js"></script>
+	<script src="ui.js"></script>
+	<script src="main.js"></script>
+</head>
+
+<body>
+	<div id='menu'>
+		<div id='cmenu'>
+			<ul id='ulmenu'>
+				<li class='form_add'>Добавить</li>
+				<li class='form_export'>&#8679; Импорт / &#8681; Экспорт</li>
+				<li class='form_clear'>Очистить</li>
+				<li><div id='copyright'>Игорь Шорников &copy; 2013-2014гг.</div></li>
+			</ul>
+			
+		</div>
+		<div id='push'>&#9660;</div>
+    </div>
+	<div id='content'>
+		<div id='head'>Расписание занятий</div>
+		<div id='switch'><div class='clndr'>Календарь</div> | <div class='rasp'>Расписание</div></div>
+		<div id='calendar'></div>
+		<!-- Блок с расписанием -->
+		<div class='schedule'></div>
+		<!--  Форма "Добавить / Редактировать"  -->	
+		<div class='conteiner'>
+			<h1><div class='title'></div></h1>
+			<div class='set_date'></div>
+			<div class='field_names'>
+				<p>Название / Тема: </p>
+				<p>Спикер: </p>
+				<p>Начало: </p>
+				<p>Продолжительность: </p>
+				<p>Время окончания: </p>
+				<p>Примечание: </p>
+			</div>
+			<form onsubmit="return false">
+				<p><input name="name"></p>
+				<p><input name='speaker'></p>
+				<p><select name="s_hour" size=1></select> : <select name="s_min" size=1></select> чч : мм</p>
+				<p><select name="s_long" size=1></select> мин.</p>
+				<p><div  class='set_time'></div></p>
+				<p><textarea name='note'></textarea></p>
+			</form>
+			<input type='submit' class='add'> <input type='submit' class='close' value='Закрыть'>
+			<div class='messeng'></div>
+		</div>
+		<!--  Форма "Очистить"  -->		
+		<div class='clear'>
+			<h1>Очистить запись</h1>
+			<p><input type="radio" name="clr" value="day" checked="checked"> Выбранный день</p>
+			<p><input type="radio" name="clr" value="all"> Все записи</p>
+			<input type='submit' class='del' value='Очистить'> <input type="submit" class='close' value="Закрыть">
+		</div>
+			<!-- Форма Импорт/Экспорт -->
+		<div class='expo'>
+			<h1>Импорт / Экспорт</h1>
+			<textarea name='expo'></textarea>
+			<br /><br />
+			<input type='submit' class='import' value='Импорт'> <input type='submit' class='export' value='Экспорт'> <input type='submit' class='close' value='Закрыть'>
+			<div class='messeng'></div>
+		</div>
+	</div>	
+</body>
+</html>

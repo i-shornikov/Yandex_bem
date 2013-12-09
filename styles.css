@@ -1,0 +1,337 @@
+﻿* {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, "Lucida Grande", "Lucida Sans Unicode", sans-serif;
+}
+ 
+body {
+	background: white;
+	background: url(body.png) repeat-x;
+}
+
+input[type='submit']{
+	padding: 3px;
+}
+
+#menu {
+	width: 100%;
+	position: absolute;
+	top: -30px;
+	overflow: hidden;
+}
+
+#cmenu {
+	width: 100%;
+	height: 30px;
+	background: #1E90FF;
+	border-bottom: 2px solid #0E80EF;
+	-webkit-box-shadow: 0px 1px 1px rgba(50, 50, 50, 1);
+	-moz-box-shadow: 0px 1px 1px rgba(50, 50, 50, 1);
+	box-shadow: 0px 1px 1px rgba(50, 50, 50, 1);
+}
+
+#ulmenu ul {
+	list-style: none;
+}
+	
+#ulmenu li {
+	display: inline;
+	padding: 5px 0 5px 50px;
+	color: white;
+	font-weight: bold;
+	display: table-cell;
+	vertical-align: middle;
+	 cursor: pointer;
+}
+
+#copyright{
+	position: absolute;
+	top: 6px;
+	right: 10px;
+	color: white;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 10pt
+}
+
+#push {
+	position: relative;
+	margin: 0 auto;
+	padding-top: 4px;
+	color: #f9f9f9;
+	margin-top: 1px;
+	text-align: center;
+	font-size: 12pt;
+	cursor: pointer;
+}
+
+#push:hover {
+	color: #aaa
+}
+
+#content {
+	margin: 50px auto;
+	width: 1000px;
+	height: 800px;
+}
+
+#content a {
+	text-decoration: none;
+	color: #444;
+}
+
+#content a:link {
+	text-decoration: none;
+	color: white;
+}
+	
+#head {
+	font-size: 20pt;
+	text-align: center;
+	font-weight: bold;
+}
+
+#switch {
+	margin: 0 auto;
+	width: 200px;
+	text-align: center;
+	padding: 4px;
+	background: #f9f9f9;
+	border: 1px solid #aaa;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+.clndr, .rasp {
+	display: inline;
+	cursor: pointer; 
+}
+
+#calendar {
+	padding: 20px;
+}
+
+table.ui-datepicker-calendar {
+	border-collapse: separate;
+	border: 1px solid #9DABCE;
+	border-width: 0px 0px 1px 1px;
+	margin: 10px auto;
+	font-size: 20px;
+	border-spacing: 0px !important;
+}
+
+.ui-datepicker-calendar td, th {
+	width: 81px;
+	height: 81px;
+	text-align: center;
+	vertical-align: middle;
+	background: url(cells.png);
+	color: white;
+	position: relative;
+}
+
+.ui-datepicker-calendar th {
+	height: 30px;
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.ui-datepicker-calendar td:hover {
+	background-position: 0px -81px;
+}
+	
+td.ui-datepicker-today {
+	background-position: 81px 0px;
+	color: white;
+}
+
+td.ui-datepicker-today:hover {
+	background-position: 81px -81px;
+}
+	
+td.ui-datepicker-week-end,
+.ui-datepicker-week-end a:link ,
+th.ui-datepicker-week-end {
+	color: red;
+}
+
+.ui-datepicker-header {
+	margin: 0px auto;
+	text-align: center;
+	width: 250px;
+}
+
+td.subject {
+	background-position: 162px 81px;
+}
+
+td.subject:hover{
+	background-position: 162px 0px;
+}
+
+td.selected {
+	outline: 3px solid red;
+	outline-offset: -3px;
+}
+
+.schedule {
+	display:none;
+	margin: 0 auto;
+	width: 600px;
+	height: auto;
+	text-align: center;
+}
+
+.lesson {
+	display: inline-block;
+	padding: 5px 0;
+	height: inherit;
+}
+
+.get_den {
+	font-size: 24pt;
+	text-align: center;
+}
+
+.get_den2 {
+	font-size: 10pt;
+	color: red;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.get_time {
+	float: left;
+	text-align: right;
+	display: inline;
+	width: 250px;
+	padding:0 10px;
+	height: auto;
+}
+
+.day {
+	margin: 0 auto;
+	display: inline-block;
+	padding: 10px;
+	height: inherit;
+}
+
+.edit, .del_one {
+	float: left;
+	text-align: right;
+	display: inline;
+	width: 250px;
+	height: auto;
+	font: italic 10pt serif;
+	opacity: 0.1;
+}
+
+.edit:hover, .del_one:hover {
+	color: red;
+	cursor: pointer;
+	opacity: 1;
+}
+
+.info {
+	float: right;
+	text-align: left;
+	display: inline;
+	width: 250px;
+	padding: 0 10px;
+	padding-bottom: 5px;
+	height: auto;
+}
+
+.conteiner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	min-width: 350px;
+	width: auto;
+	height: auto;
+	margin: -210px 0 0 -210px;
+	padding: 20px;
+	text-align: center;
+	background: #eee;
+	border: 2px ridge #ddd;
+	display: none;
+}
+
+.conteiner p {
+	padding: 5px;
+}
+
+.conteiner form {
+	text-align: left;
+}
+
+.set_date {
+	color: red;
+	padding: 10px; 
+}
+
+.field_names {
+	text-align: left;
+	float: left;
+}
+
+textarea[name = "note"]{
+	width: 325px;
+	height: 100px;
+	padding: 5px;
+}
+
+.messeng {
+	color: green;
+	text-align: left;
+	font-size: 9pt;
+	padding: 10px 0 0 0;
+	margin-left: 5px;
+}
+
+.conteiner h1, .clear h1, .expo h1 {
+	padding: 0 10px 20px 10px;
+}
+
+.clear{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	margin: -210px 0 0 -210px;
+	padding: 20px;
+	text-align: center;
+	background: #eee;
+	border: 2px ridge #ddd;
+	display: none;
+}
+
+.clear  p {
+	padding: 0px 10px 20px 0px;
+}
+
+.expo {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: auto;
+	margin: -210px 0 0 -210px;
+	padding: 20px;
+	text-align: center;
+	background: #eee;
+	border: 2px ridge #ddd;
+	display: none;
+}
+
+textarea[name = "expo"]{
+	width: 300px;
+	height: 300px;
+	padding: 10px;
+}
+
+.export, .imp, .exp, .bufer {
+	padding: 2px;
+}
